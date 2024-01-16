@@ -40,13 +40,10 @@ ul {
 
 /* General Styles */
 html {
-	background-color: #fff;
+	background-color: var(--clr-neutral-200);
 }
 
 body {
-	/* height: 100dvh; */
-	/* display: grid;
-	place-content: center; */
 	font-family: 'Hanken Grotesk', sans-serif;
 	font-size: 1.125rem;
 	font-weight: 500;
@@ -55,7 +52,11 @@ body {
 
 .container {
 	width: min(100vw, 736px);
+	background-color: var(--clr-neutral-100);
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
 	margin-inline: auto;
+	box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
 }
 
 .result-container {
@@ -87,6 +88,15 @@ body {
 	font-weight: 800;
 	font-size: 3.5rem;
 	margin: 0;
+	animation: countUp 2s ease-out;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes countUp {
+	to {
+		opacity: 1;
+	}
 }
 
 .result-circle p {
@@ -103,6 +113,7 @@ body {
 .result-container .small-text {
 	font-size: 1rem;
 	font-weight: 500;
+	text-wrap: balance;
 }
 
 .summary-container {
@@ -199,10 +210,59 @@ body {
 }
 
 /* Front End Mentor Styling */
+footer {
+	margin-block: 1rem;
+}
+
 .attribution {
 	font-size: 11px;
 	text-align: center;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries - Tablet & Desktop */
+@media (min-width: 40.75rem) {
+	body {
+		height: 100dvh;
+		display: grid;
+		place-content: center;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		border-radius: 2rem;
+		margin-inline: auto;
+		width: min(95vw, 735px);
+	}
+
+	.result-container {
+		justify-content: space-between;
+		border-radius: 2rem;
+		padding: 2.38rem 3.35rem 3.44rem;
+	}
+
+	.result-circle {
+		width: 12.5rem;
+		height: 12.5rem;
+	}
+
+	.result-circle h2 {
+		font-size: 4.5rem;
+	}
+
+	.result-container .big-text {
+		font-size: 2rem;
+	}
+
+	.result-container .small-text {
+		font-size: 1.125rem;
+	}
+
+	.summary-container {
+		justify-content: space-between;
+		padding: 2.3rem 2.5rem 2.8rem;
+	}
 }
