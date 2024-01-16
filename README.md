@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/graficdoctor/fe-24-001-results-summary-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Code on Github](https://github.com/graficdoctor/fe-24-001-results-summary-component)
+- Live Site URL: [Deployed on Netlify](https://grand-macaron-f3b01e.netlify.app/)
 
 ## My process
 
@@ -46,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-I'm still learning how to work with animations. I had an idea of which animation I wanted to implement but s I'd never done it before I found the solution with Chat GPT.
+I'm still learning how to work with animations. I had an idea of which animation I wanted to implement but as I'd never done it before I looked up the solution with Chat GPT.
 
 ```css
 .result-circle h2 {
@@ -88,6 +88,6 @@ function animateNumber() {
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Add your name here](https://www.katriens.be)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/graficdoctor)
+- Twitter - [@yourusername](https://www.twitter.com/graficdoctor)
