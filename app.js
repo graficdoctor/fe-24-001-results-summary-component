@@ -1,5 +1,7 @@
 const buttonElement = document.querySelector('.btn');
 const summaryItemsList = document.querySelector('ul');
+let targetNumber;
+let count = 0
 
 buttonElement.addEventListener('click', (e) => e.preventDefault());
 document.addEventListener('DOMContentLoaded', () => animateNumber());
@@ -16,12 +18,13 @@ fetch('data.json')
         <span class="score">${item.score} <span class="opacity-low">/ 100</span></span>
       `;
 			summaryItemsList.appendChild(summaryItem);
+			count += item.score;
 		});
+		targetNumber = Math.round(count / data.length);
 	});
 
 function animateNumber() {
-	const resultNumberDisplay = document.querySelector('.result-circle h2');
-	const targetNumber = 76;
+	const resultNumberDisplay = document.getElementById('result');
 	let currentNumber = 0;
 
 	const intervalId = setInterval(() => {
